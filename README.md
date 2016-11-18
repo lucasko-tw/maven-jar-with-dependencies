@@ -1,8 +1,6 @@
 Using Maven makes Jar file with dependencies
 ==================================
 
-
-### Introduction of Maven
 [Maven in 5 Minutes](https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html)
 
 
@@ -74,14 +72,13 @@ Using Maven makes Jar file with dependencies
 
 ### Create jar file
 
-1. compile: compile the source code of the project
+compile: compile the source code of the project
  
 ```sh
- mvn package
+ mvn compile
 ```
 
-
-2. package: take the compiled code and package it in its distributable format, such as a JAR.
+package: take the compiled code and package it in its distributable format, such as a JAR.
 
 ```sh
  mvn package
@@ -91,9 +88,10 @@ the jar is created in target/tutorial-maven-jar-with-dependencies.jar
 ### Run jar file
 
 ```sh
- java -jar tutorial-maven-jar-with-dependencies.jar
+  java -jar tutorial-maven-jar-with-dependencies.jar
 ```
 
+the result is:
 	Hello world
 
 
