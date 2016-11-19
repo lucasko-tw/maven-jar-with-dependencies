@@ -6,6 +6,23 @@ Using Maven makes Jar file with dependencies
 
 ### Edit pom.xml from Maven Project
 
+Import dependency into project.
+
+```xml
+	<dependencies>
+
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.17</version>
+		</dependency>
+
+	</dependencies>
+```
+
+
+Maven Assembly Plugin
+
 ```xml
 <build>
 		<finalName>${project.artifactId}</finalName>
@@ -68,6 +85,27 @@ Using Maven makes Jar file with dependencies
 ```
 
 
+### App.java
+
+```JAVA
+package org.lucasko;
+
+import org.apache.log4j.Logger;
+
+public class App {
+
+	public static Logger logger = Logger.getLogger(App.class);
+	
+	public static void main(String[] args)  {
+		
+		logger.info("Hello World");
+		
+	}
+
+}
+```
+
+![App.java](https://github.com/lucasko-tw/maven-jar-with-dependencies/blob/master/jar-with-dependencies.png)
 
 
 ### Create jar file
@@ -92,6 +130,7 @@ the jar is created in target/tutorial-maven-jar-with-dependencies.jar
 ```
 
 the result is:
-	Hello world
+
+	[16/11/19 09:48:12][INFO][org.lucasko.App-11] Hello World
 
 
